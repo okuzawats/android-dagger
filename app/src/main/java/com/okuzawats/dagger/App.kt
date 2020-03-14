@@ -4,6 +4,7 @@ import android.app.Application
 import android.util.Log
 import com.okuzawats.dagger.di.AppComponent
 import com.okuzawats.dagger.di.DaggerAppComponent
+import com.okuzawats.dagger.di.FortuneModule
 import com.okuzawats.dagger.di.LuckyNumberModule
 
 class App : Application() {
@@ -13,13 +14,16 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        val luckyNumberModule = LuckyNumberModule(777)
+        val luckyNumber = 777
+        val luckyNumberModule = LuckyNumberModule(luckyNumber)
+        val fortuneModule = FortuneModule(luckyNumber)
 
         appComponent = DaggerAppComponent.builder()
             .luckyNumberModule(luckyNumberModule)
+            .fortuneModule(fortuneModule)
             .build()
 
-        val luckyNumber = appComponent.getLuckyNumberText()
-        Log.i("App", luckyNumber)
+        Log.i("App", appComponent.getLuckyNumberText())
+        Log.i("App", appComponent.getFortuneText())
     }
 }
