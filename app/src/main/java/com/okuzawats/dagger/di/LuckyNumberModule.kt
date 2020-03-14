@@ -12,4 +12,9 @@ class LuckyNumberModule(
     @Provides
     @Named("lucky number text")
     fun provideLuckyNumberText() = "今日のラッキーナンバー: $luckyNumber"
+
+    @AppScope
+    @Provides
+    @Named("lucky number")
+    fun provideLuckyNumber() = luckyNumber
 }

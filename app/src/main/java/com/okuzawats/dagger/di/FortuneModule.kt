@@ -5,11 +5,13 @@ import dagger.Provides
 import javax.inject.Named
 
 @Module
-class FortuneModule(private val luckyNumber: Int) {
+class FortuneModule {
     @AppScope
     @Provides
     @Named("fortune text")
-    fun provideFortuneText(): String {
+    fun provideFortuneText(
+        @Named("lucky number") luckyNumber: Int
+    ): String {
         val fortune = when (luckyNumber) {
             in 0..99 -> "アゲアゲ！！！"
             in 100..499 -> "アゲ！！"
