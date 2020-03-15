@@ -9,7 +9,5 @@ import dagger.Component
 ])
 interface AppComponent {
     fun getLuckyNumberTextCreator(): LuckyNumberTextCreator
-
-    @NamedFortuneText
-    fun getFortuneText(): String
+    fun getFortuneTextCreator(): FortuneTextCreator
 }

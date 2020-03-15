@@ -21,6 +21,6 @@ class App : Application() {
             .build()
 
         Log.i("App", appComponent.getLuckyNumberTextCreator().luckyNumberText())
-        Log.i("App", appComponent.getFortuneText())
+        Log.i("App", appComponent.getFortuneTextCreator().fortuneText())
     }
 }
