@@ -1,7 +1,6 @@
 package com.okuzawats.dagger.di
 
 import dagger.Component
-import javax.inject.Named
 
 @AppScope
 @Component(modules = [
@@ -9,9 +8,9 @@ import javax.inject.Named
     FortuneModule::class
 ])
 interface AppComponent {
-    @Named("lucky number text")
+    @NamedLuckyNumberText
     fun getLuckyNumberText(): String
 
-    @Named("fortune text")
+    @NamedFortuneText
     fun getFortuneText(): String
 }
