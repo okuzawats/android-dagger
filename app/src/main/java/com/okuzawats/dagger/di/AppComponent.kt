@@ -8,8 +8,7 @@ import dagger.Component
     FortuneModule::class
 ])
 interface AppComponent {
-    @NamedLuckyNumberText
-    fun getLuckyNumberText(): String
+    fun getLuckyNumberTextCreator(): LuckyNumberTextCreator
 
     @NamedFortuneText
     fun getFortuneText(): String

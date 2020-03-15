@@ -20,7 +20,7 @@ class App : Application() {
             .luckyNumberModule(luckyNumberModule)
             .build()
 
-        Log.i("App", appComponent.getLuckyNumberText())
+        Log.i("App", appComponent.getLuckyNumberTextCreator().luckyNumberText())
         Log.i("App", appComponent.getFortuneText())
     }
 }
