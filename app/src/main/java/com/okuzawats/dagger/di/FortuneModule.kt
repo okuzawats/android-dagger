@@ -2,15 +2,14 @@ package com.okuzawats.dagger.di
 
 import dagger.Module
 import dagger.Provides
-import javax.inject.Named
 
 @Module
 class FortuneModule {
     @AppScope
     @Provides
-    @Named("fortune text")
+    @NamedFortuneText
     fun provideFortuneText(
-        @Named("lucky number") luckyNumber: Int
+        @NamedLuckyNumber luckyNumber: Int
     ): String {
         val fortune = when (luckyNumber) {
             in 0..99 -> "アゲアゲ！！！"
