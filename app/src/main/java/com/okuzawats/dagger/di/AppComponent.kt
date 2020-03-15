@@ -4,8 +4,7 @@ import dagger.Component
 
 @AppScope
 @Component(modules = [
-    LuckyNumberModule::class,
-    FortuneModule::class
+    LuckyNumberModule::class
 ])
 interface AppComponent {
     fun getLuckyNumberTextCreator(): LuckyNumberTextCreator

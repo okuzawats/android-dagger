@@ -1,6 +1,9 @@
 package com.okuzawats.dagger.di
 
-class FortuneTextCreator(
+import javax.inject.Inject
+
+@AppScope
+class FortuneTextCreator @Inject constructor(
     private val luckyNumber: Int
 ) {
     fun fortuneText(): String {
