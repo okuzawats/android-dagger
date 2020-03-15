@@ -2,7 +2,6 @@ package com.okuzawats.dagger.di
 
 import dagger.Module
 import dagger.Provides
-import javax.inject.Named
 
 @Module
 class LuckyNumberModule(
@@ -10,11 +9,11 @@ class LuckyNumberModule(
 ) {
     @AppScope
     @Provides
-    @Named("lucky number text")
+    @NamedLuckyNumberText
     fun provideLuckyNumberText() = "今日のラッキーナンバー: $luckyNumber"
 
     @AppScope
     @Provides
-    @Named("lucky number")
+    @NamedLuckyNumber
     fun provideLuckyNumber() = luckyNumber
 }
