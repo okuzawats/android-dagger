@@ -6,7 +6,4 @@ import javax.inject.Qualifier
 annotation class NamedLuckyNumberText
 
 @Qualifier
-annotation class NamedLuckyNumber
-
-@Qualifier
 annotation class NamedFortuneText

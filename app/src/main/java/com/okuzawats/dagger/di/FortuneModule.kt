@@ -9,7 +9,7 @@ class FortuneModule {
     @Provides
     @NamedFortuneText
     fun provideFortuneText(
-        @NamedLuckyNumber luckyNumber: Int
+        luckyNumber: Int
     ): String {
         val fortune = when (luckyNumber) {
             in 0..99 -> "アゲアゲ！！！"

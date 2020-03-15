@@ -14,6 +14,5 @@ class LuckyNumberModule(
 
     @AppScope
     @Provides
-    @NamedLuckyNumber
     fun provideLuckyNumber() = luckyNumber
 }
